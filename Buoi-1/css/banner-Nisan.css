@@ -1,6 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
 
+h1, h2, h3, h4, h5, p {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+}
+
 .banner-Nisan {
 	width: 300px;
 	height: 250px;
@@ -30,8 +38,47 @@
 	bottom: 3%;
 	color: white;
 	letter-spacing: 0.075em;
-	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
 	animation: dh-txt-footer 10s infinite;
+}
+
+.uudai {
+	color: white;
+	position: absolute;
+	right: 10px;
+	animation: dh-uudai 10s infinite;
+}
+
+.giam {
+	position: absolute;
+	right: 30px;
+	color: yellow;
+	font-size: 25px;
+	font-weight: 300;
+	animation: dh-giam 10s infinite, nhay 1s infinite 5s;
+}
+
+@keyframes nhay {
+	0% {
+		color: yellow;
+	}
+	50% {
+		color: pink;
+	}
+	100% {
+		color: yellow;
+	}
+	
+}
+
+@keyframes dh-giam {
+	0%, 40% {
+		transform: scale(0);
+		top: 70px;
+	}
+	45%, 100% {
+		transform: scale(1);
+		top: 45px;
+	}
 }
 
 @keyframes dh-nen {
@@ -78,6 +125,17 @@
 		opacity: 0;
 	}
 	30%, 100% {
+		opacity: 1;
+	}
+}
+
+@keyframes dh-uudai {
+	0%, 30% {
+		top: 80px;
+		opacity: 0;
+	}
+	40%, 100% {
+		top: 20px;
 		opacity: 1;
 	}
 }
