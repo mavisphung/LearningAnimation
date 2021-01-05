@@ -7,11 +7,31 @@
 	background-image: url("../images/image1.png");
 	animation: dh-nen 10s infinite;
 	position: relative;
+	overflow: hidden;
 }
 
 .logo {
 	position: absolute;
 	animation: dh-logo 10s infinite;
+}
+
+.bg-footer {
+	position: absolute;
+	bottom: 0;
+	left: 120%;
+	animation: dh-bg-footer 10s infinite;
+}
+
+.txt-footer {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	left: 4%;
+	bottom: 3%;
+	color: white;
+	letter-spacing: 0.075em;
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	animation: dh-txt-footer 10s infinite;
 }
 
 @keyframes dh-nen {
@@ -40,6 +60,24 @@
 		left: 0;
 		top: 0;
 		transform: scale(1) rotate(0);
+		opacity: 1;
+	}
+}
+
+@keyframes dh-bg-footer {
+	0%, 20% {
+		left: 120%;
+	}
+	25%, 100% {
+		left: 0;
+	}
+}
+
+@keyframes dh-txt-footer {
+	0%, 25% {
+		opacity: 0;
+	}
+	30%, 100% {
 		opacity: 1;
 	}
 }
