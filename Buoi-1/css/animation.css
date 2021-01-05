@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1 {
+	color: red;
+	position: relative;
+	font-size: 20px;
+/*	tên hàm chuyển động*/
+	animation-name: ChuyenDongDoiMau;
+/*	thời gian chuyển động*/
+	animation-duration: 5s;
+/*	số lần chuyển động*/
+	animation-iteration-count: 5;
+/*	chạy theo chiều ngược lại mà mình chỉnh*/
+	animation-direction: reverse;
+}
+
+.line {
+	width: 20%;
+	height: 20px;
+	background-color: red;
+	position: relative;
+	left: 40%;
+	top: 200px;
+	
+	animation: Xoay 3s infinite linear;
+}
+
+@keyframes ChuyenDongDoiMau {
+/*
+	from {
+		color: red;
+		font-size: 40px;
+	}
+	
+	to {
+		color: green;
+		font-size: 80px;
+	}
+*/
+/*	chạy theo chiều kim đồng hồ*/
+	0% {
+		left: 0;
+		top: 0;
+	}
+	25% {
+		left: 700px;
+		top: 0;
+	}
+	50% {
+		left: 700px;
+		top: 500px;
+	}
+	75% {
+		left: 0;
+		top: 500px;
+	}
+	100% {
+		left: 0;
+		top: 0;
+	}
+}
+
+@keyframes Xoay {
+	0% {
+		transform: rotate(0);
+	}
+	
+	100% {
+		transform: rotate(360deg);
+	}
+}
