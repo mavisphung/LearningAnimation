@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+.banner-Nisan {
+	width: 300px;
+	height: 250px;
+	background-image: url("../images/image1.png");
+	animation: dh-nen 10s infinite;
+	position: relative;
+}
+
+.logo {
+	position: absolute;
+	animation: dh-logo 10s infinite;
+}
+
+@keyframes dh-nen {
+	0% {
+		background-size: 678px 480px;
+	}
+	10%, 100% {
+		background-size: 300px 250px;
+	}
+}
+
+@keyframes dh-logo {
+	0%, 10% {
+		left: 40%;
+		top: 35%;
+		transform: scale(0) rotate(360deg);
+		opacity: 0;
+	}
+	15% {
+		left: 40%;
+		top: 35%;
+		transform: scale(1) rotate(0);
+		opacity: 1;
+	}
+	20%, 100% {
+		left: 0;
+		top: 0;
+		transform: scale(1) rotate(0);
+		opacity: 1;
+	}
+}
