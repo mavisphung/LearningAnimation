@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+.box-container {
+	width: 200px;
+	height: 200px;
+	margin: 150px auto;
+	position: relative;
+	border: 1px solid #000;
+	text-align: center;
+/*	tạo độ nghiêng khi xoay*/
+/*	càng nhỏ thì càng nghiêng
+	Đẹp nhất là >= width của đối tượng mẹ	
+*/
+	perspective: 200px;
+}
+
+.dt-xoay, .front, .back {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transform-style: preserve-3d;
+	top: 0;
+	left: 0;
+}
+
+.dt-xoay {
+	box-sizing: border-box;
+	transition: all 1s;
+	transform-style: preserve-3d;
+}
+
+.box-container:hover .dt-xoay {
+	transform: rotateY(180deg);
+}
+
+.img-fashion {
+	width: 100%;
+	height: 100%;
+}
+
+.back {
+	background-color: grey;
+	transform-style: preserve-3d;
+	transform: rotateY(180deg);
+}
