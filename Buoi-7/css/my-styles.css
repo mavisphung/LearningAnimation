@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-color: #E5E5E5;
+}
+
+.nav-item:hover .nav-link {
+	color: #2F80ED;
+}
+
+.dropdown-item {
+	border-bottom: 1px solid #939393;
+}
+
+.dropdown-item:hover {
+	
+}
+
+.dropdown-menu {
+	background-color: #056CB6;
+}
